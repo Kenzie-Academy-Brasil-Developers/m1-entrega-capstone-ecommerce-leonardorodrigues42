@@ -55,13 +55,19 @@ const precoTotal = document.querySelector('.precoParagrafo')
 const quantidadeTotal = document.querySelector('.quantidadeParagrafo')
 let precoResumo = 0
 
-for (let item of addCart) {
-    item.addEventListener('click', () => {
+function carrinho(){
+    let contador = 0
+    for (let item of addCart) {
+        item.addEventListener('click', () => {
+        
+        contador++
+        quantidadeTotal.textContent = contador
 
         precoResumo += data[item.id - 1].value
         
         const li = document.createElement('li')
         li.className = 'item-cart'
+        li.id = item.id
         
         const img = document.createElement('img')
         img.src = data[item.id - 1].img
@@ -87,27 +93,31 @@ for (let item of addCart) {
         
         ulCart.appendChild(li)
 
-        const itensCart = document.querySelectorAll('.item-cart')
-        
-        let contador = 0
         
         precoTotal.innerHTML = `R$ ${precoResumo}.00`
+        console.log(addCart)
+
+        const paiDoRemover = caracteristicas.parentNode
         
-        itensCart.forEach(produto => {
-            contador++
-            quantidadeTotal.innerText = contador
-            
-            const p = produto.querySelector('p')
-            
-            p.addEventListener('click', () => {
-                produto.remove()
-                contador -= 1
-                quantidadeTotal.innerText = contador
-                console.log(contador)
-            })
+        remover.addEventListener("click", () => {
+            console.log(paiDoRemover.id)
+            ulCart.removeChild(paiDoRemover)
+            contador--
+            quantidadeTotal.textContent = contador
+            precoResumo -= data[paiDoRemover.id - 1].value
+            precoTotal.textContent = `R$ ${precoResumo}.00`
+            console.log(event.target)
+        })     
         })
-    
-    })
+    }   
+
 }
+
+carrinho()
+
+// function remover() {
+
+//     for ( )
+// }
 
 
