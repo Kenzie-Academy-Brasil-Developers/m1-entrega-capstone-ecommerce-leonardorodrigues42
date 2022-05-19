@@ -11,25 +11,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <script defer src="js/index.js"></script>
     <title>E-commerce</title>
 </head>
 <body>
     <header class="header">
         <div class="container-header">
-        <h1>Weartake</h1>
-        <nav>
-            <a href="" class="todos">Todos</a>
-            <a href="">Acessórios</a>
-            <a href="">Calçados</a>
-            <a href="">Camisetas</a>
-        </nav>
+            <h1>Weartake</h1>
+            <nav>
+                <a href="" class="todos">Todos</a>
+                <a href="">Acessórios</a>
+                <a href="">Calçados</a>
+                <a href="">Camisetas</a>
+            </nav>
         </div>
     </header>
     <main class="vitrine">
         <section class="card">
             <ul class="lista">
-                <li class="cardProduct">
+                <!-- <li class="cardProduct">
                     <div class="imagem">
                         <img src="./img/moletom.svg" alt="">
                     </div>
@@ -50,7 +49,7 @@
                         <h3>Lightweight Jacket</h3>
                         <p>Adicione um pouco de energia ao seu guarda-roupa de inverno com esta jaqueta vibrante...</p>
                         <h4>R$ 100.00</h4>
-                        <a href="">Adicionar ao carrinho</a>
+                        <p class="addCart">Adicionar ao carrinho</p>
                     </div>
                 </li>
                 <li class="cardProduct">
@@ -100,7 +99,7 @@
                         <h4>R$ 100.00</h4>
                         <a href="">Adicionar ao carrinho</a>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </section>
         <aside>
@@ -109,12 +108,27 @@
         </div>
         <div class="carrinho-de-produtos">
             <h2>Carrinho de compras</h2>
-            <div>
+            <!-- <div class="off-itens">
                 <h3>Carrinho vazio</h3>
                 <p>Adicione itens</p>
+            </div> -->
+            <div class="on-itens">
+                <ul class="carrinho">
+                </ul>
+                <div class="resumo">
+                    <div class="quantidade">
+                        <p>Quantidade:</p>
+                        <p class="quantidadeParagrafo">0</p>
+                    </div>
+                    <div class="total">
+                        <p>Total:</p>
+                        <p class="precoParagrafo">0</p>
+                    </div>
+                </div>
             </div>
         </div>
-        </aside>
-    </main>
+    </aside>
+</main>
+<script type="module" src="js/index.js"></script>
 </body>
 </html>
