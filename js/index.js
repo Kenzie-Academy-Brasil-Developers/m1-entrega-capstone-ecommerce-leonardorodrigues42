@@ -114,10 +114,3 @@ function carrinho(){
 }
 
 carrinho()
-
-// function remover() {
-
-//     for ( )
-// }
-
-
